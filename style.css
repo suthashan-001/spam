@@ -1,64 +1,111 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* typograph */
-.heading-title{
-    letter-spacing: 3px;
-    font-weight: 400;
+.heading-title {
+  letter-spacing: 3px;
+  font-weight: 400;
 }
 
 /* layout */
-body{
-    background: rgb(255, 242, 242);
+body {
+  background: #ffdfdf;
 }
-.webpage-title{
-    background: rgb(55, 55, 55);
-    color: white;
-    padding: 0em 7em;
-    margin-top: 3em;
-    margin-bottom: 1em;
-    padding-bottom: 1em;
-    position: relative;
+.webpage-title {
+  background: rgb(55, 55, 55);
+  color: white;
+  padding: 0em 7em;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  position: relative;
 }
-.red-block{
-    position: absolute;
-    width: 66px;
-    background: rgb(255, 88, 88);
-    height: 100%;
-    left: 0;
+.red-block {
+  position: absolute;
+  width: 66px;
+  background: rgb(255, 88, 88);
+  height: 100%;
+  left: 0;
 }
-.grid-container{
-    padding: 1em 3em;
-    border:1px solid red;
-    display: grid;
-    grid-template-columns: 1fr 3.5fr 1.5fr;
+.grid-container {
+  padding: 1em 3em;
+  display: grid;
+  grid-template-columns: 1fr 3.5fr 1.5fr;
 }
-.dashboard-nav{
-    border-right: 1px solid rgb(195, 195, 195);
+.dashboard-nav {
+  border-right: 1px solid rgb(106, 106, 106);
 }
-.dashboard-nav ul{
-    padding: 0;
+.dashboard-nav ul {
+  padding: 0;
 }
-.dashboard-nav ul li{
-    list-style: none;
-    margin-bottom: 3em;
-    padding-top: 3em;
+.dashboard-nav ul li {
+  list-style: none;
+  margin-bottom: 3em;
+  padding-top: 3em;
 }
-.dashboard-nav ul li a{
-    color: rgb(53, 53, 53);
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    padding: 1em 0;
+.dashboard-nav ul li a {
+  color: rgb(53, 53, 53);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 1em 0;
 }
 
-.dashboard-nav ul:last-child(){
-    padding-bottom: 3em;
+.dashboard-nav ul:last-child() {
+  padding-bottom: 3em;
 }
-.dashboard-nav ul li a.current-page{
-    text-decoration: underline;
-    font-weight: bold;
+.dashboard-nav ul li a.current-page {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.nav-link:hover,
+.nva-link:focus {
+  background: #f7c1c1;
+}
+
+.spam-detection-analysis-container {
+  padding: 2em;
+}
+.section-title {
+  margin-bottom: 1.5em;
+}
+
+/* Table styling */
+.spam-analysis-table {
+  border: 1px solid black;
+  width: 100%;
+  background: white;
+}
+.table-row-head {
+  display: flex;
+  align-items: center;
+}
+.table-row-head img {
+  margin-right: 0.8em;
+}
+td:not(:last-child) {
+  border-right: 1px solid grey;
+}
+td {
+  border-bottom: 1px solid grey;
+  padding: 1em;
+}
+
+/* Model Performance */
+.model-heading div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flame-logo {
+  margin-top: 1em;
+}
+
+.model-performance {
+  padding-top: 5em;
 }

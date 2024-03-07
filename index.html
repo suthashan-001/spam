@@ -1,104 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spam Detector</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <!-- vertical black bar -->
     <section class="webpage-title">
-        <div class="red-block">
-        </div>
-        <div class="heading-container">
-            <img src="" alt="" class="spam-icon">
-            <h1 class="heading-title">Spam detector dashboard</h1>
-        </div>
+      <div class="red-block"></div>
+      <div class="heading-container">
+        <img src="" alt="" class="spam-icon" />
+        <h1 class="heading-title">Spam detector dashboard</h1>
+      </div>
     </section>
 
     <section class="grid-container">
-        <div class="nav-container">
-            <!-- navigation -->
-            <nav class="dashboard-nav">
-                <ul>
-                    <li>
-                        <a href="." class="dashboard current-page">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="./about" class="About">About</a>
-                    </li>
-                    <li>
-                        <a href="." class="docs">Docs</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+      <div class="nav-container">
+        <!-- navigation -->
+        <nav class="dashboard-nav">
+          <ul>
+            <li>
+              <a href="." class="dashboard current-page nav-link">Dashboard</a>
+            </li>
+            <li>
+              <a href="./about" class="About nav-link">About</a>
+            </li>
+            <li>
+              <a href="." class="docs nav-link">Docs</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-        <div class="spam-detection-analysis-container">
-            <h3 class="section-title">Spam Detection Analysis</h3>
-            <table class="spam-analysis-table">
-                <!-- heading row -->
-                <thead>
-                    <tr>
-                        <td>
-                            <div class="table-row-head">
-                                <img src="" alt="" class="file-icon">
-                                <h5 class="table-row-head-label">File</h5>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="table-row-head">
-                                <img src="" alt="" class="file-icon">
-                                <h5 class="table-row-head-label">Spam Probability</h5>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="table-row-head">
-                                <img src="" alt="" class="file-icon">
-                                <h5 class="table-row-head-label">Class</h5>
-                            </div>
-                        </td>
-                    </tr>
-                </thead>
-
-                <!-- body row -->
-                <tbody>
-                    <tr class="table-body-row">
-                        <td class="file-col">
-                            <p class="file-text">temp value</p>
-                        </td>
-                        <td class="spam-prob-col">
-                            <p class="prob-text">temp value</p>
-                        </td>
-                        <td class="class-col">
-                            <p class="class-text">temp value</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <aside class="model-performance"> 
-            <section class="model-heading">
-                <div class="flex-container">
-                    <h3 class="title">Model Perfomance</h3>
-                <img src="" alt="" class="flame-logo">
+      <div class="spam-detection-analysis-container">
+        <h3 class="section-title">Spam Detection Analysis</h3>
+        <table class="spam-analysis-table">
+          <!-- heading row -->
+          <thead>
+            <tr>
+              <td>
+                <div class="table-row-head">
+                  <img src="./images/file-img.png" alt="" class="file-icon" />
+                  <h5 class="table-row-head-label">File</h5>
                 </div>
-            </section>
+              </td>
+              <td>
+                <div class="table-row-head">
+                  <img src="./images/prob-img.png" alt="" class="spam-icon" />
+                  <h5 class="table-row-head-label">Spam Probability</h5>
+                </div>
+              </td>
+              <td>
+                <div class="table-row-head">
+                  <svg
+                    class="class-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2.2em"
+                    height="2.2em"
+                    viewBox="0 0 32 32"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M14 23h8v2h-8zm-4 0h2v2h-2zm4-5h8v2h-8zm-4 0h2v2h-2zm4-5h8v2h-8zm-4 0h2v2h-2z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M25 5h-3V4a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v1H7a2 2 0 0 0-2 2v21a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2M12 4h8v4h-8Zm13 24H7V7h3v3h12V7h3Z"
+                    />
+                  </svg>
+                  <h5 class="table-row-head-label">Class</h5>
+                </div>
+              </td>
+            </tr>
+          </thead>
 
-            <div class="accuracy-container">
-                <label for="accuracy-output">Accuracy</label>
-                <output class="accuracy-output" id="accuracy-output"></output>
-            </div>
+          <!-- body row -->
+          <tbody>
+            <tr class="table-body-row">
+              <td class="file-col">
+                <p class="file-text">temp value</p>
+              </td>
+              <td class="spam-prob-col">
+                <p class="prob-text">temp value</p>
+              </td>
+              <td class="class-col">
+                <p class="class-text">temp value</p>
+              </td>
+            </tr>
+            <tr class="table-body-row">
+              <td class="file-col">
+                <p class="file-text">temp value</p>
+              </td>
+              <td class="spam-prob-col">
+                <p class="prob-text">temp value</p>
+              </td>
+              <td class="class-col">
+                <p class="class-text">temp value</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-            <div class="precision-container">
-                <label for="precision-output">Precision</label>
-                <output class="precision-output" id="precision-output"></output>
-            </div>
-        </aside>
+      <!-- Model performance -->
+      <aside class="model-performance">
+        <section class="model-heading">
+          <div class="flex-container">
+            <h3 class="title">Model Performance</h3>
+            <img
+              src="./images/flame-img.png"
+              alt="orange flame logo"
+              class="flame-logo"
+            />
+          </div>
+        </section>
+
+        <div class="accuracy-container">
+          <label for="accuracy-output">Accuracy</label>
+          <output class="accuracy-output" id="accuracy-output"></output>
+        </div>
+
+        <div class="precision-container">
+          <label for="precision-output">Precision</label>
+          <output class="precision-output" id="precision-output"></output>
+        </div>
+      </aside>
     </section>
-</body>
-<script src="./app.js"></script>
+  </body>
+  <script src="./app.js"></script>
 </html>
