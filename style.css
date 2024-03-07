@@ -8,11 +8,21 @@
 .heading-title {
   letter-spacing: 3px;
   font-weight: 400;
+  margin-top: 0.55em;
 }
 
 /* layout */
 body {
   background: #ffdfdf;
+}
+.heading-container {
+  display: flex;
+  align-items: center;
+}
+.spam-icon {
+  margin-top: 1em;
+  width: 55px;
+  margin-right: 1.5em;
 }
 .webpage-title {
   background: rgb(55, 55, 55);
@@ -109,3 +119,14 @@ td {
 .model-performance {
   padding-top: 5em;
 }
+
+/* Github color codes 
+
+font: InkTree, Inter
+
+su-n -> #6A5111
+mahz -> #0F2B0E
+Nab  -> #191C64
+Nim  -> #BB2020
+
+*/
