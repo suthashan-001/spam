@@ -29,7 +29,7 @@
               <a href="." class="dashboard current-page nav-link">Dashboard</a>
             </li>
             <li>
-              <a href="./about" class="About nav-link">About</a>
+              <a href="./about.html" class="About nav-link">About</a>
             </li>
             <li>
               <a href="." class="docs nav-link">Docs</a>
@@ -121,14 +121,22 @@
           </div>
         </section>
 
-        <div class="accuracy-container">
-          <label for="accuracy-output">Accuracy</label>
-          <output class="accuracy-output" id="accuracy-output"></output>
+        <div class="accuracy-container output-container">
+          <div class="flex-container">
+            <label for="accuracy-output output-label">Accuracy</label>
+            <output class="accuracy-output output-field" id="accuracy-output"
+              >value</output
+            >
+          </div>
         </div>
 
-        <div class="precision-container">
-          <label for="precision-output">Precision</label>
-          <output class="precision-output" id="precision-output"></output>
+        <div class="precision-container output-container">
+          <div class="flex-container">
+            <label for="precision-output output-label">Precision</label>
+            <output class="precision-output output-field" id="precision-output"
+              >value</output
+            >
+          </div>
         </div>
       </aside>
     </section>

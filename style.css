@@ -50,6 +50,8 @@ body {
 }
 .dashboard-nav ul {
   padding: 0;
+  margin-right: 1em;
+  margin-left: 3.3em;
 }
 .dashboard-nav ul li {
   list-style: none;
@@ -57,7 +59,7 @@ body {
   padding-top: 3em;
 }
 .dashboard-nav ul li a {
-  color: rgb(53, 53, 53);
+  color: rgb(99, 99, 99);
   text-decoration: none;
   display: block;
   width: 100%;
@@ -74,7 +76,34 @@ body {
 
 .nav-link:hover,
 .nva-link:focus {
-  background: #f7c1c1;
+  color: black;
+  font-weight: bold;
+  scale: 1.4;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* triangle style on hover */
+.nav-link:hover::before,
+.nva-link:focus::before {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black; /* Adjust the color to match your design */
+  display: inline-block;
+  transform: rotate(90deg);
+  position: relative;
+  margin-right: 11px;
+  margin-top: -2px;
+  animation: blink 3.3s infinite ease-out;
 }
 
 .spam-detection-analysis-container {
@@ -118,6 +147,29 @@ td {
 
 .model-performance {
   padding-top: 5em;
+}
+
+.output-field {
+  width: 200px;
+  height: 33px;
+  background: white;
+}
+
+.output-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.output-label {
+  align-self: flex-start;
 }
 
 /* Github color codes 
