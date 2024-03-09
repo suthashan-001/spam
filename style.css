@@ -1,3 +1,4 @@
+/* Normalization */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,9 @@
   letter-spacing: 3px;
   font-weight: 400;
   margin-top: 0.55em;
+}
+.section-title{
+  letter-spacing: 1px;
 }
 
 /* layout */
@@ -115,7 +119,7 @@ body {
 
 /* Table styling */
 .spam-analysis-table {
-  border: 1px solid black;
+  border: 3px solid black;
   width: 100%;
   background: white;
 }
@@ -171,6 +175,60 @@ td {
 .output-label {
   align-self: flex-start;
 }
+
+/* =======================
+      About Page
+==========================*/
+.main{
+  display: grid;
+  grid-template-columns: 1.25fr 2fr;
+  border: 1px solid red;
+  height: 90vh;
+}
+.left-side-container{
+  background: white;
+  padding: 3em;
+}
+.right-side-container{
+  background: url("./images/galaxy-img.png");
+  display: flex;
+  flex-direction: column;
+  padding: 5em;
+  justify-content: center;
+  align-items: center;
+} 
+
+/* card design */
+.card{
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 55%;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+.logo-container{
+  border: 1px solid black;
+}
+.git-logo{
+  width: 88px;
+}
+.card-1{
+  background: rgb(154, 0, 0);
+}
+.card-2{
+  background: rgb(0, 0, 110);
+}
+.card-3{
+  background: rgb(0, 58, 0);
+}
+.card-4{
+  background: rgb(136, 97, 0);
+}
+
+
 
 /* Github color codes 
 
