@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 /* Normalization */
 * {
   margin: 0;
@@ -11,7 +13,7 @@
   font-weight: 400;
   margin-top: 0.55em;
 }
-.section-title{
+.section-title {
   letter-spacing: 1px;
 }
 
@@ -51,6 +53,7 @@ body {
 }
 .dashboard-nav {
   border-right: 1px solid rgb(106, 106, 106);
+  padding-bottom: 1em;
 }
 .dashboard-nav ul {
   padding: 0;
@@ -179,64 +182,144 @@ td {
 /* =======================
       About Page
 ==========================*/
-.main{
+.main {
   display: grid;
   grid-template-columns: 1.25fr 2fr;
-  border: 1px solid red;
-  height: 90vh;
+  height: 100vh;
 }
-.left-side-container{
+.left-side-container {
   background: white;
-  padding: 3em;
+  padding-top: 2em;
+  font-family: "Inter", sans-serif;
 }
-.right-side-container{
+.about-page-nav {
+  padding: 2em;
+  padding-right: 3em;
+}
+.about-page-nav ul {
+  list-style: none;
+  border-top: 1px solid grey;
+  padding-top: 1em;
+}
+.about-page-nav ul li {
+  padding: 1em 0;
+  text-align: center;
+}
+.about-nav-link {
+  text-decoration: none;
+  color: black;
+}
+.about-nav-link:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.right-side-container {
   background: url("./images/galaxy-img.png");
   display: flex;
   flex-direction: column;
   padding: 5em;
   justify-content: center;
   align-items: center;
-} 
+}
 
 /* card design */
-.card{
+.card {
   color: white;
   display: grid;
   grid-template-columns: 1fr 2fr;
   width: 55%;
+  min-width: 400px;
   align-items: center;
   justify-content: center;
   padding: 1em;
+  padding-left: 2em;
   margin-bottom: 2em;
+  border: none;
+  text-align: left;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
-.logo-container{
+.name {
+  font-size: 22px;
+  margin-bottom: 0.25em;
+  letter-spacing: 3px;
+}
+.card:hover,
+.card:focus {
+  cursor: pointer;
+  scale: 1.1;
+  border: 1px solid white;
+}
+.card:hover .github-icon {
+  display: block;
+}
+.logo-container {
   border: 1px solid black;
 }
-.git-logo{
+.git-logo {
   width: 88px;
 }
-.card-1{
+
+.card-1 {
   background: rgb(154, 0, 0);
 }
-.card-2{
+.card-1:hover,
+.card-1:focus {
+  box-shadow: 0px 0px 55px rgb(255, 163, 163);
+}
+.card-2 {
   background: rgb(0, 0, 110);
 }
-.card-3{
+.card-2:hover,
+.card-2:focus {
+  box-shadow: 0px 0px 55px rgb(140, 140, 255);
+}
+.card-3 {
   background: rgb(0, 58, 0);
 }
-.card-4{
+.card-3:hover,
+.card-3:focus {
+  box-shadow: 0px 0px 55px rgb(137, 255, 137);
+}
+.card-4 {
   background: rgb(136, 97, 0);
 }
+.card-4:hover,
+.card-4:focus {
+  box-shadow: 0px 0px 55px rgb(255, 255, 255);
+}
 
+.about-tag {
+  background: black;
+  color: white;
+  padding: 0.5em;
+  width: 222px;
+}
+.project-about-article {
+  padding: 1.5em;
+  padding-top: 3em;
+  line-height: 1.6;
+}
+.second-paragraph {
+  padding-top: 1.5em;
+}
+.about-nav-link {
+  padding: 1em;
+}
 
+/* responsive styling < About Page > */
 
-/* Github color codes 
-
-font: InkTree, Inter
-
-su-n -> #6A5111
-mahz -> #0F2B0E
-Nab  -> #191C64
-Nim  -> #BB2020
-
-*/
+@media screen and (max-width: 999px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-side-container {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
