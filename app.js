@@ -54,13 +54,24 @@ function getFetchMe(endpoint, updateFunc) {
 function postFetchMe(endpoint, data, sendFunc) {
   const url = `${baseUrl}${endpoint}`;
 
-  fetch(url, {
+  //Initalize configuration for fetch
+  let config = {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: {},
     body: data,
-  })
+  };
+
+  // check if file is formData to handle file uploads
+  if (data instanceof FormData) {
+    config.body = data;
+  } else {
+    //for JSON data set header and stringify body
+    config.headers["Content-Type"] = "application/json";
+    config.body = JSON.stringify(data);
+  }
+
+  //fetch takes in config based on the type of data sent
+  fetch(url, config)
     //check server connection
     .then(handleResponse)
     //retrieve data from back-end
@@ -70,14 +81,15 @@ function postFetchMe(endpoint, data, sendFunc) {
     })
 
     .catch((err) => {
+      //to be filled in
       showError("specific error {fill in}");
       console.error("Problem with fetch operation, ", err);
     });
 }
 
-/* =============================
+/* ==================================================================
   Priority: 1 Need to implement value fetching, waiting on endpoints
-===============================*/
+=====================================================================*/
 
 /* =======================================
   Fetching Get Functions
@@ -141,6 +153,7 @@ function uploadFiles(files) {
   //files is an array that holds individual files
 
   let url = "/upload";
+  // Form Data is used for file uploads
   let formData = new FormData();
 
   //loop through files array
