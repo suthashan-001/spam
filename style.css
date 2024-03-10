@@ -46,6 +46,9 @@ body {
   height: 100%;
   left: 0;
 }
+.mobile-icon {
+  display: none;
+}
 .grid-container {
   padding: 1em 3em;
   display: grid;
@@ -59,7 +62,7 @@ body {
 .dashboard-nav ul {
   padding: 0;
   margin-right: 1em;
-  margin-left: 3.3em;
+  margin-left: 2em;
 }
 .dashboard-nav ul li {
   list-style: none;
@@ -175,9 +178,33 @@ td {
   flex-direction: column;
   padding: 1em;
 }
-
 .output-label {
   align-self: flex-start;
+}
+
+@media screen and (max-width: 999px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-container {
+    display: none;
+  }
+  .mobile-icon {
+    display: block;
+    color: #ff8282;
+    margin-left: 3em;
+    margin-top: 0.8em;
+  }
+  .red-block {
+    right: 0;
+  }
+  .webpage-title {
+    padding-right: 1em;
+  }
+  .heading-container {
+    justify-content: space-evenly;
+  }
 }
 
 /* =======================
@@ -399,4 +426,14 @@ td {
 .x-icon:hover {
   color: rgb(255, 44, 44);
   scale: 1.25;
+}
+
+@media screen and (max-width: 999px) {
+  .drop-box-container {
+    margin-left: 0;
+    width: 77%;
+  }
+  .drop-box {
+    padding-bottom: 5em;
+  }
 }
