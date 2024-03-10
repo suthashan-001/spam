@@ -5,14 +5,15 @@ const statusErrorMsg = {
   500: "Error occurred on server, please try again",
 };
 
-// handle response (based on server)
+// processes the server's response to a request
 function handleResponse(response) {
   if (!response.ok) {
     //response.status gives us status code, we check our object for the appropriate msg
+    //if the reponse is unsucessful, find and throw the correct error
     const errorMsg = statusErrorMsg[response.status] || "An Error has occurred";
     throw new Error(errorMsg);
   }
-  // if response is ok (meaning successful server connection return response json)
+  // if response is successful, convert response to JSON and return
   return response.json();
 }
 
@@ -33,6 +34,7 @@ function showError(errorMSg) {
 const baseUrl =
   "/w24-csci2020u-assignment01-zahir-tabassum-tharmarajah-rehman/";
 
+// perform GET request
 function getFetchMe(endpoint, updateFunc) {
   const url = `${baseUrl}${endpoint}`;
 
@@ -41,9 +43,8 @@ function getFetchMe(endpoint, updateFunc) {
   })
     //handle the response, includes check for errors
     .then(handleResponse)
-    //retrieve data from back-end
     .then((data) => {
-      // update ui based on response {this includes functions that update the Accurcy and Percision along with table values}
+      // uses the recieved data to update the user interface {this includes functions that update the Accurcy and Percision along with table values}
       updateFunc(data);
     })
     .catch((err) => {
@@ -51,10 +52,11 @@ function getFetchMe(endpoint, updateFunc) {
     });
 }
 
+// perform POST request
 function postFetchMe(endpoint, data, sendFunc) {
   const url = `${baseUrl}${endpoint}`;
 
-  //Initalize configuration for fetch
+  //Initalize configuration for the fetch request
   let config = {
     method: "POST",
     headers: {},
@@ -70,18 +72,16 @@ function postFetchMe(endpoint, data, sendFunc) {
     config.body = JSON.stringify(data);
   }
 
-  //fetch takes in config based on the type of data sent
   fetch(url, config)
-    //check server connection
+    //check and process the server response
     .then(handleResponse)
-    //retrieve data from back-end
     .then((data) => {
       // this includes functions that deal with sending to server
       sendFunc(data);
     })
 
     .catch((err) => {
-      //to be filled in
+      //Display a specific error message to user interface
       showError("specific error {fill in}");
       console.error("Problem with fetch operation, ", err);
     });
@@ -98,7 +98,6 @@ function postFetchMe(endpoint, data, sendFunc) {
 function updateTable() {
   //to be filled in
 }
-
 function updateAccuracy() {
   // to be filled in
 }
@@ -129,19 +128,20 @@ let dropArea = document
   .getElementById("drop-area")
   .addEventListener("drop", handleDrop);
 
-// handle file drop
+// handle file drop event
 function handleDrop(e) {
-  //prevent default behavior  of file being opened
+  //prevent default behavior of file being opened
   e.preventDefault();
   e.stopPropagation();
 
   var data = e.dataTransfer;
 
   if (data.items) {
-    //access the files individually
+    //access each dragged item
     [...data.items].forEach((item, i) => {
       //check to see if dropped items are files
       if (item.kind === "file") {
+        // if the item is a file, retrieve it
         const file = item.getAsFile();
       }
     });
