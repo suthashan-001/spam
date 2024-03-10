@@ -34,7 +34,7 @@ body {
   background: rgb(55, 55, 55);
   color: white;
   padding: 0em 7em;
-  margin-top: 3em;
+  margin-top: 2em;
   margin-bottom: 1em;
   padding-bottom: 1em;
   position: relative;
@@ -50,6 +50,7 @@ body {
   padding: 1em 3em;
   display: grid;
   grid-template-columns: 1fr 3.5fr 1.5fr;
+  padding-bottom: 3.5em;
 }
 .dashboard-nav {
   border-right: 1px solid rgb(106, 106, 106);
@@ -322,4 +323,80 @@ td {
     width: 100%;
     max-width: 500px;
   }
+}
+
+/* ========================== 
+  Drop Box Styling
+=============================*/
+.dropbox {
+  background: rgb(55, 55, 55);
+  padding: 3em 0;
+  margin-top: 3.3em;
+  display: flex;
+  justify-content: center;
+}
+.drop-box-container {
+  width: 52%;
+  margin-left: -144px;
+}
+.submit-files-btn {
+  color: rgb(49, 49, 49);
+  background: #fcbbbb;
+  padding: 1em 2em;
+  border: none;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+.submit-files-btn:hover,
+.submit-files-btn:focus {
+  background: #ffa5a5;
+  color: black;
+  border: 2px solid black;
+}
+.drop-box-area {
+  border: 1.5px dashed #ff8282;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+  margin-top: 1.5em;
+}
+.dropbox-icon {
+  color: #fcbbbb;
+  margin-right: 2em;
+}
+.dropbox-text {
+  font-size: 23px;
+  letter-spacing: 1.5px;
+}
+.show-dropped-files {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.dropped-file {
+  display: flex;
+  width: 333px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2.2em;
+}
+.dropped-file-icon {
+  color: rgb(187, 187, 187);
+}
+.file-name {
+  color: white;
+  font-size: 18px;
+}
+.x-icon {
+  color: #ff8282;
+  cursor: pointer;
+}
+.x-icon:hover {
+  color: rgb(255, 44, 44);
+  scale: 1.25;
 }
